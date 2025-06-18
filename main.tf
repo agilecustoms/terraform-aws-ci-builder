@@ -35,9 +35,9 @@ data "aws_iam_policy_document" "builder_codeartifact" {
 }
 
 data "aws_iam_policy_document" "builder" {
-  source_policy_documents = concat(
+  source_policy_documents = [
     data.aws_iam_policy_document.builder_codeartifact.json,
-  )
+  ]
 }
 
 resource "aws_iam_policy" "builder" {
