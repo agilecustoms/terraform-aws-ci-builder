@@ -16,6 +16,13 @@ module "builder_policy" {
 }
 ```
 
+## How to create a role with this policy
+
+This module creates just policy, and here is a _recommendation_ how to create a role.
+For roles used in CI pipelines, it is highly recommended to use OIDC provider, not IAM user with credentials.
+See [terraform-aws-ci-publisher](https://github.com/agilecustoms/terraform-aws-ci-publisher) for an example.
+
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
@@ -56,12 +63,6 @@ No modules.
 | Name        | Description                      |
 |-------------|----------------------------------|
 | policy_arn  | ARN of a policy that was created |
-
-## How to create a role with this policy
-
-This module creates just policy, and here is a _recommendation_ how to create a role.
-For roles used in CI pipelines, it is highly recommended to use OIDC provider, not IAM user with credentials.
-See [terraform-aws-ci-publisher](https://github.com/agilecustoms/terraform-aws-ci-publisher) for an example.
 
 ## Authors
 
