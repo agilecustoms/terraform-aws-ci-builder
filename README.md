@@ -4,6 +4,8 @@ IAM policy `/ci/builder` to build applications relying on software packages stor
 
 The policy allows `codeartifact:ReadFromRepository` from all CodeArtifact repositories in a specified domain
 
+To publish artifacts in S3, ECR and CodeArtifact, see another module [terraform-aws-ci-publisher](https://github.com/agilecustoms/terraform-aws-ci-publisher)
+
 ## Usage
 
 ```hcl
