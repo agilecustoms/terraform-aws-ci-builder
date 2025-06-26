@@ -13,7 +13,6 @@ module "builder_policy" {
 ```
 
 ## Variables
-
 | Name                     | Default   | Description                                                                         |
 |--------------------------|-----------|-------------------------------------------------------------------------------------|
 | account_id               |           | (required) AWS account id where all artifacts are stored (S3, ECR, CodeArtifact)    |
@@ -24,7 +23,11 @@ module "builder_policy" {
 | region                   |           | (required) AWS region where CodeArtifact is located                                 |
 
 ## Outputs
-
 | Name        | Description                      |
 |-------------|----------------------------------|
 | policy_arn  | ARN of a policy that was created |
+
+## How to create a role with this policy
+This module creates just policy, and here is a _recommendation_ how to create a role.
+For roles used in CI pipelines, it is highly recommended to use OIDC provider, not IAM user with credentials.
+See [terraform-aws-ci-publisher](https://github.com/agilecustoms/terraform-aws-ci-publisher) for an example.
