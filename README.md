@@ -1,7 +1,7 @@
 # terraform-aws-ci-builder
 IAM policy `/ci/builder` to build applications relying on software packages stored in CodeArtifact
 
-This policy basically allows `codeartifact:ReadFromRepository` from all CodeArtifact repositories in a specified domain
+The policy allows `codeartifact:ReadFromRepository` from all CodeArtifact repositories in a specified domain
 
 ## Usage
 ```hcl
