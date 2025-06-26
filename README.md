@@ -15,14 +15,14 @@ module "builder_policy" {
 ```
 
 ## Variables
-| Name                     | Default   | Description                                                                         |
-|--------------------------|-----------|-------------------------------------------------------------------------------------|
-| account_id               |           | (required) AWS account id where all artifacts are stored (S3, ECR, CodeArtifact)    |
-| codeartifact_domain_name |           | (required) CodeArtifact domain, typically just a company name. Keep empty if unused |
-| iam_policy_path          | "/ci/"    | Use path to differentiate application/user/CI roles                                 |
-| iam_policy_name          | "builder" | Name of the IAM policy                                                              |
-| partition                | "aws"     | AWS partition, e.g. aws, aws-cn, aws-us-gov                                         |
-| region                   |           | (required) AWS region where CodeArtifact is located                                 |
+| Name                     | Default | Description                                                                         |
+|--------------------------|---------|-------------------------------------------------------------------------------------|
+| account_id               |         | (required) AWS account id where all artifacts are stored (S3, ECR, CodeArtifact)    |
+| codeartifact_domain_name |         | (required) CodeArtifact domain, typically just a company name. Keep empty if unused |
+| iam_policy_path          | /ci/    | Use path to differentiate application/user/CI roles                                 |
+| iam_policy_name          | builder | Name of the IAM policy                                                              |
+| partition                | aws     | AWS partition, e.g. aws, aws-cn, aws-us-gov                                         |
+| region                   |         | (required) AWS region where CodeArtifact is located                                 |
 
 ## Outputs
 | Name        | Description                      |
