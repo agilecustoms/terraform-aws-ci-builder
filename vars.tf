@@ -1,18 +1,17 @@
 variable "account_id" {
-  description = "AWS account id where all artifacts are stored (S3, ECR, CodeArtifact)"
+  description = "AWS account id"
 }
 
 variable "codeartifact_domain_name" {
-  default     = ""
-  description = "CodeArtifact domain, typically just a company name. Keep default (empty) if you don't use CodeArtifact"
+  description = "CodeArtifact domain, typically just a company name"
 }
 
-variable "iam_path" {
+variable "iam_policy_path" {
   default     = "/ci/"
   description = "use path to differentiate application roles, user roles and CI roles"
 }
 
-variable "iam_role_name" {
+variable "iam_policy_name" {
   default = "builder"
 }
 
@@ -22,5 +21,5 @@ variable "partition" {
 }
 
 variable "region" {
-  description = "AWS region where all artifacts are stored (S3, ECR, CodeArtifact)"
+  description = "AWS region"
 }

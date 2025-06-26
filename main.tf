@@ -41,7 +41,7 @@ data "aws_iam_policy_document" "builder" {
 }
 
 resource "aws_iam_policy" "builder" {
-  path   = var.iam_path
-  name   = var.iam_role_name
+  path   = var.iam_policy_path
+  name   = var.iam_policy_name
   policy = data.aws_iam_policy_document.builder.json
 }
