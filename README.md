@@ -1,5 +1,5 @@
 # terraform-aws-ci-builder
-IAM policy ci-builder to build (not publish) artifacts, has read access to CodeArtifact
+IAM policy `/ci/builder` to build applications relying on software packages stored in CodeArtifact
 
 ## Usage
 ```hcl
