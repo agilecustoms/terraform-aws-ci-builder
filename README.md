@@ -83,3 +83,7 @@ Module is maintained by [Alexey Chekulaev](https://github.com/laxa1986)
 ## License
 
 Apache 2 Licensed. See [LICENSE](https://github.com/agilecustoms/terraform-aws-ci-builder/blob/main/LICENSE) for full details
+
+## Copyright
+
+Copyright 2025 [Alexey Chekulaev](https://github.com/laxa1986)
