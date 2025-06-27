@@ -1,10 +1,20 @@
+[![Terraform Registry](https://img.shields.io/badge/Terraform-Module-blue.svg)](https://registry.terraform.io/modules/agilecustoms/ci-builder/aws/latest)
+[![License](https://img.shields.io/github/license/agilecustoms/terraform-aws-ci-builder)](https://github.com/agilecustoms/terraform-aws-ci-builder/blob/main/LICENSE)
+
 # terraform-aws-ci-builder
 
-IAM policy `/ci/builder` to build applications relying on software packages stored in CodeArtifact
+## Overview
 
-The policy allows `codeartifact:ReadFromRepository` from all CodeArtifact repositories in a specified domain
+IAM policy `/ci/builder` for building applications that rely on software packages stored in CodeArtifact
 
-To publish artifacts in S3, ECR and CodeArtifact, see another module [terraform-aws-ci-publisher](https://github.com/agilecustoms/terraform-aws-ci-publisher)
+The policy allows `codeartifact:ReadFromRepository` from all CodeArtifact repositories in a specified domain.
+
+To publish artifacts to S3, ECR and CodeArtifact, see another module [terraform-aws-ci-publisher](https://github.com/agilecustoms/terraform-aws-ci-publisher)
+
+## Highlights
+
+- Grants minimal read access to CodeArtifact
+- Supports GitHub Actions and other CI systems
 
 ## Usage
 
@@ -21,7 +31,7 @@ module "builder_policy" {
 ## How to create a role with this policy
 
 This module creates just policy, and here is a _recommendation_ how to create a role.
-For roles used in CI pipelines, it is highly recommended to use OIDC provider, not IAM user with credentials.
+For roles used in CI pipelines, it is highly recommended to use an OIDC provider rather than IAM user credentials.
 See [terraform-aws-ci-publisher](https://github.com/agilecustoms/terraform-aws-ci-publisher) for an example.
 
 
@@ -51,20 +61,20 @@ No modules.
 
 ## Inputs
 
-| Name                     | Default | Description                                                                         |
-|--------------------------|---------|-------------------------------------------------------------------------------------|
-| account_id               |         | (required) AWS account id where all artifacts are stored (S3, ECR, CodeArtifact)    |
-| codeartifact_domain_name |         | (required) CodeArtifact domain, typically just a company name. Keep empty if unused |
-| iam_policy_path          | /ci/    | Use path to differentiate application/user/CI roles                                 |
-| iam_policy_name          | builder | Name of the IAM policy                                                              |
-| partition                | aws     | AWS partition, e.g. aws, aws-cn, aws-us-gov                                         |
-| region                   |         | (required) AWS region where CodeArtifact is located                                 |
+| Name                     | Default | Description                                                        |
+|--------------------------|---------|--------------------------------------------------------------------|
+| account_id               |         | (required) AWS account ID where the CodeArtifact domain is located |
+| codeartifact_domain_name |         | (required) CodeArtifact domain, typically just a company name      |
+| iam_policy_path          | /ci/    | Use path to differentiate application/user/CI roles                |
+| iam_policy_name          | builder | Name of the IAM policy                                             |
+| partition                | aws     | AWS partition, e.g. aws, aws-cn, aws-us-gov                        |
+| region                   |         | (required) AWS region where CodeArtifact is located                |
 
 ## Outputs
 
-| Name        | Description                      |
-|-------------|----------------------------------|
-| policy_arn  | ARN of a policy that was created |
+| Name       | Description                                  |
+|------------|----------------------------------------------|
+| policy_arn | ARN of the IAM policy created by this module |
 
 ## Authors
 
@@ -72,4 +82,4 @@ Module is maintained by [Alexey Chekulaev](https://github.com/laxa1986)
 
 ## License
 
-Apache 2 Licensed. See [LICENSE](https://github.com/agilecustoms/terraform-aws-ci-publisher/tree/main/LICENSE) for full details.
+Apache 2 Licensed. See [LICENSE](https://github.com/agilecustoms/terraform-aws-ci-builder/blob/main/LICENSE) for full details
