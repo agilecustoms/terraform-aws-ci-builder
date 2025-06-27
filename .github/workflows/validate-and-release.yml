@@ -24,9 +24,10 @@ jobs:
 
       - name: Release
         id: release
-        uses: agilecustoms/release@v1
+        uses: agilecustoms/publish@v1
         with:
           version-prefix: v
+          floating-tags: false
 
       - name: Summary
         run: echo "### Released ${{ steps.release.outputs.version }} :pushpin:" >> $GITHUB_STEP_SUMMARY
