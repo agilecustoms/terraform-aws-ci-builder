@@ -10,7 +10,7 @@ To publish artifacts in S3, ECR and CodeArtifact, see another module [terraform-
 
 ```hcl
 module "builder_policy" {
-  source = "git::https://github.com/agilecustoms/terraform-aws-ci-builder.git?ref=v1"
+  source = "agilecustoms/ci-builder/aws"
 
   account_id               = local.account_id
   codeartifact_domain_name = local.artifact_domain_name
@@ -30,7 +30,7 @@ See [terraform-aws-ci-publisher](https://github.com/agilecustoms/terraform-aws-c
 
 | Name                                                                      | Version   |
 |---------------------------------------------------------------------------|-----------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0    |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.7  |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws)                   | >= 3.38.0 |
 
 ## Providers
@@ -49,7 +49,7 @@ No modules.
 |-----------------------------------------------------------------------------------------------------------------------------|----------|
 | [aws_iam_policy.builder](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_iam_policy)        | resource |
 
-## Variables
+## Inputs
 
 | Name                     | Default | Description                                                                         |
 |--------------------------|---------|-------------------------------------------------------------------------------------|
