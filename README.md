@@ -5,9 +5,10 @@
 
 ## Overview
 
-IAM policy `/ci/builder` for building applications that rely on software packages stored in CodeArtifact
+IAM policy `/ci/builder` for building applications that rely on software packages stored in CodeArtifact.
+Originally designed to be used in CI pipelines by GitHub action [agilecustoms/setup-maven-codeartifact](https://github.com/agilecustoms/setup-maven-codeartifact)
 
-The policy allows `codeartifact:ReadFromRepository` from all CodeArtifact repositories in a specified domain.
+The policy allows `codeartifact:ReadFromRepository` from all CodeArtifact repositories in a specified domain
 
 To publish artifacts to S3, ECR and CodeArtifact, see another module [terraform-aws-ci-publisher](https://github.com/agilecustoms/terraform-aws-ci-publisher)
 
@@ -32,10 +33,8 @@ module "builder_policy" {
 
 This module creates just policy, and here is a _recommendation_ how to create a role.
 For roles used in CI pipelines, it is highly recommended to use an OIDC provider rather than IAM user credentials.
-See [terraform-aws-ci-publisher](https://github.com/agilecustoms/terraform-aws-ci-publisher) for an example.
+See [terraform-aws-ci-publisher](https://github.com/agilecustoms/terraform-aws-ci-publisher) for an example
 
-
-<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name                                                                      | Version   |
