@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.3...v1.0.4) (2025-08-22)
+
+### Miscellaneous
+
+* Release workflow uses GH environment 'release' for secrets ([35b3a56](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/35b3a56c3e8e0fd625e3165af2575d67ffd9817f))
+
+
 ## [1.0.3](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.2...v1.0.3) (2025-07-27)
 
 ### Bug Fixes
