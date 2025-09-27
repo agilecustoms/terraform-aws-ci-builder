@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.4...v1.0.5) (2025-09-27)
+
+### Miscellaneous
+
+* unify build workflow ([25a1edc](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/25a1edcac5f9678b50aeef8944b0dd6da92432db))
+
+
 ## [1.0.4](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.3...v1.0.4) (2025-08-22)
 
 ### Miscellaneous
