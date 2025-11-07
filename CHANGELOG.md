@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.6](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.5...v1.0.6) (2025-11-07)
+
+### Miscellaneous
+
+* rename job ([4f77224](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/4f77224245004b864e9f2290307c36957d42e569))
+
+
 ## [1.0.5](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.4...v1.0.5) (2025-09-27)
 
 ### Miscellaneous
