@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.8](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.7...v1.0.8) (2026-01-20)
+
+### Miscellaneous
+
+* use actions/checkout@v6 ([fb4133b](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/fb4133b64e09b3ebdd47b7ceca0b1a406695e4ba))
+
+
 ## [1.0.7](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.6...v1.0.7) (2026-01-13)
 
 ### Miscellaneous
