@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.9](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.8...v1.0.9) (2026-02-01)
+
+### Miscellaneous
+
+* get rid of npm-extra-deps ([f2db782](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/f2db7824922dce2de99ca75087e09429bc47e29c))
+
+
 ## [1.0.8](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.7...v1.0.8) (2026-01-20)
 
 ### Miscellaneous
