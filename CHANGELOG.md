@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.10](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.9...v1.0.10) (2026-10-09)
+
+### Miscellaneous
+
+* update GitHub actions to latest versions ([294385b](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/294385b040e4c2bc862c147fda37bb6df1794ade))
+
+
 ## [1.0.9](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.8...v1.0.9) (2026-02-01)
 
 ### Miscellaneous
