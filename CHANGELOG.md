@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.11](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.10...v1.0.11) (2026-11-11)
+
+### Miscellaneous
+
+* rename CI step to Terraform validate [skip ci] ([66df28f](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/66df28f8bce4ffd2a90991ef7e881a419b78c6ac))
+* rename Validate-infra job to Validate (infra-only repo) [skip ci] ([e978958](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/e978958310fbc407e36ac0240da238449a2e4989))
+* tflint (all rules), typed and documented variables, variables.tf ([e76e547](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/e76e54770987f022472feb0e6dc1a70c28d76bf1))
+* unify .gitignore sections [skip ci] ([8662859](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/86628598354534e82f4be1d5529867d1bdb4358c))
+
+
 ## [1.0.10](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.9...v1.0.10) (2026-10-09)
 
 ### Miscellaneous
