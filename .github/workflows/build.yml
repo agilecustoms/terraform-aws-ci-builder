@@ -17,21 +17,21 @@ jobs:
         uses: hashicorp/setup-terraform@v4
 
       - name: Terraform init
-        run: make terraform-init
-
-      - name: Terraform validate
-        run: make terraform-validate
+        run: make deps-install
 
       - name: Setup TFLint
         uses: terraform-linters/setup-tflint@v6
         with:
           tflint_version: v0.66.0
 
-      - name: Terraform lint
-        run: make terraform-lint
+      - name: Lint
+        run: make lint
         env:
           # plugins are downloaded from GitHub releases, w/o token the API rate limit is shared by all runners on the IP
           GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Terraform validate
+        run: make test-tf-validate
 
   Release:
     if: github.ref == 'refs/heads/main'
