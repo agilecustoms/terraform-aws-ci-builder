@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.12](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.11...v1.0.12) (2026-11-19)
+
+### Dependencies update
+
+* .releaserc.json same as gha-release: build: releases a patch, 'Dependencies update' section ([88dd472](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/88dd472f9889bc59e5e6b09a29a61d5fab8fb8db))
+* make targets lint, test-tf-validate, test-tf, deps-*; pre-commit hook runs make lint ([2d9812c](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/2d9812c3c27296f1e8c6e6b8dc05225962505234))
+
+
 ## [1.0.11](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.10...v1.0.11) (2026-11-11)
 
 ### Miscellaneous
