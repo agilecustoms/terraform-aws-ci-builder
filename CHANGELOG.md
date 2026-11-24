@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.13](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.12...v1.0.13) (2026-11-24)
+
+### Dependencies update
+
+* terraform test (plan-only), builder policy must stay read-only ([77ca7cd](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/77ca7cd33f09e015db6c7ee03d78a8e2cef76564))
+
+
 ## [1.0.12](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.11...v1.0.12) (2026-11-19)
 
 ### Dependencies update
