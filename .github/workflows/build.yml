@@ -33,6 +33,9 @@ jobs:
       - name: Terraform validate
         run: make test-tf-validate
 
+      - name: Terraform test
+        run: make test-tf
+
   Release:
     if: github.ref == 'refs/heads/main'
     needs: Validate

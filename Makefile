@@ -12,3 +12,6 @@ lint:
 
 test-tf-validate:
 	@terraform validate
+
+test-tf:
+	@terraform test
