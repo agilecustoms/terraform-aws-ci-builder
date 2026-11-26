@@ -19,7 +19,8 @@ Read side of *setup-maven-codeartifact*, the publish side is *terraform-aws-ci-p
 ## Development
 
 `make lint test-tf-validate test-tf`, all targets are in [Makefile](Makefile).
-`test-tf` runs `terraform test` (`tests/builder.tftest.hcl`) with `command = plan` and a provider that skips AWS credentials
+`test-tf` runs `terraform test` (`tests/builder.tftest.hcl`) with `command = plan` and a provider
+that skips AWS credentials
 
 ## Documentation rules
 
