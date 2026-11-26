@@ -1,14 +1,16 @@
-[![Terraform Registry](https://img.shields.io/badge/Terraform-Module-blue.svg)](https://registry.terraform.io/modules/agilecustoms/ci-builder/aws/latest)
-[![License](https://img.shields.io/github/license/agilecustoms/terraform-aws-ci-builder)](https://github.com/agilecustoms/terraform-aws-ci-builder/blob/main/LICENSE)
+[![Terraform Registry][terraform-registry-badge]][terraform-registry]
+[![License][license-badge]][license]
 
 # terraform-aws-ci-builder
 
 IAM policy `/ci/builder` for building applications that rely on software packages stored in CodeArtifact.
-Originally designed to be used in CI pipelines by GitHub action [agilecustoms/setup-maven-codeartifact](https://github.com/agilecustoms/setup-maven-codeartifact)
+Originally designed to be used in CI pipelines by GitHub action
+[agilecustoms/setup-maven-codeartifact][setup-maven-codeartifact]
 
 The policy allows `codeartifact:ReadFromRepository` from all CodeArtifact repositories in a specified domain
 
-To publish artifacts to S3, ECR and CodeArtifact, see another module [terraform-aws-ci-publisher](https://github.com/agilecustoms/terraform-aws-ci-publisher)
+To publish artifacts to S3, ECR and CodeArtifact, see another module
+[terraform-aws-ci-publisher][terraform-aws-ci-publisher]
 
 ## Highlights
 
@@ -31,7 +33,7 @@ module "builder_policy" {
 
 This module creates just policy, and here is a _recommendation_ how to create a role.
 For roles used in CI pipelines, it is highly recommended to use an OIDC provider rather than IAM user credentials.
-See [terraform-aws-ci-publisher](https://github.com/agilecustoms/terraform-aws-ci-publisher) for an example
+See [terraform-aws-ci-publisher][terraform-aws-ci-publisher] for an example
 
 ### Inputs
 
@@ -69,18 +71,27 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                 | Type     |
-|----------------------------------------------------------------------------------------------------------------------|----------|
-| [aws_iam_policy.builder](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_iam_policy) | resource |
+| Name                                     | Type     |
+|------------------------------------------|----------|
+| [aws_iam_policy.builder][aws-iam-policy] | resource |
 
 ## Authors
 
-Module is maintained by [Alexey Chekulaev](https://github.com/laxa1986)
+Module is maintained by [Alexey Chekulaev][alexey-chekulaev]
 
 ## License
 
-Apache 2 Licensed. See [LICENSE](https://github.com/agilecustoms/terraform-aws-ci-builder/blob/main/LICENSE) for full details
+Apache 2 Licensed. See [LICENSE][license] for full details
 
 ## Copyright
 
-Copyright 2025 [Alexey Chekulaev](https://github.com/laxa1986)
+Copyright 2025 [Alexey Chekulaev][alexey-chekulaev]
+
+[alexey-chekulaev]: https://github.com/laxa1986
+[aws-iam-policy]: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_iam_policy
+[license]: https://github.com/agilecustoms/terraform-aws-ci-builder/blob/main/LICENSE
+[license-badge]: https://img.shields.io/github/license/agilecustoms/terraform-aws-ci-builder
+[setup-maven-codeartifact]: https://github.com/agilecustoms/setup-maven-codeartifact
+[terraform-aws-ci-publisher]: https://github.com/agilecustoms/terraform-aws-ci-publisher
+[terraform-registry]: https://registry.terraform.io/modules/agilecustoms/ci-builder/aws/latest
+[terraform-registry-badge]: https://img.shields.io/badge/Terraform-Module-blue.svg
