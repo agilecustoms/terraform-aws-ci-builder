@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.14](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.13...v1.0.14) (2026-11-26)
+
+### Documentation
+
+* README structure (rule 002), AGENTS.md with internals ([6c06fca](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/6c06fca655ec8ca606ccb6bf81ec5e71c75479e6))
+
+
 ## [1.0.13](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.12...v1.0.13) (2026-11-24)
 
 ### Dependencies update
