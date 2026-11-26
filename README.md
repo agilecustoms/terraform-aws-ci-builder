@@ -3,8 +3,6 @@
 
 # terraform-aws-ci-builder
 
-## Overview
-
 IAM policy `/ci/builder` for building applications that rely on software packages stored in CodeArtifact.
 Originally designed to be used in CI pipelines by GitHub action [agilecustoms/setup-maven-codeartifact](https://github.com/agilecustoms/setup-maven-codeartifact)
 
@@ -29,11 +27,28 @@ module "builder_policy" {
 }
 ```
 
-## How to create a role with this policy
+### How to create a role with this policy
 
 This module creates just policy, and here is a _recommendation_ how to create a role.
 For roles used in CI pipelines, it is highly recommended to use an OIDC provider rather than IAM user credentials.
 See [terraform-aws-ci-publisher](https://github.com/agilecustoms/terraform-aws-ci-publisher) for an example
+
+### Inputs
+
+| Name                     | Required | Default | Description                                             |
+|--------------------------|----------|---------|---------------------------------------------------------|
+| account_id               | yes      |         | AWS account ID where the CodeArtifact domain is located |
+| codeartifact_domain_name | yes      |         | CodeArtifact domain, typically just a company name      |
+| iam_policy_path          | no       | /ci/    | Use path to differentiate application/user/CI roles     |
+| iam_policy_name          | no       | builder | Name of the IAM policy                                  |
+| partition                | no       | aws     | AWS partition, e.g. aws, aws-cn, aws-us-gov             |
+| region                   | yes      |         | AWS region where CodeArtifact is located                |
+
+### Outputs
+
+| Name       | Description                                  |
+|------------|----------------------------------------------|
+| policy_arn | ARN of the IAM policy created by this module |
 
 ## Requirements
 
@@ -54,26 +69,9 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                        | Type     |
-|-----------------------------------------------------------------------------------------------------------------------------|----------|
-| [aws_iam_policy.builder](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_iam_policy)        | resource |
-
-## Inputs
-
-| Name                     | Default | Description                                                        |
-|--------------------------|---------|--------------------------------------------------------------------|
-| account_id               |         | (required) AWS account ID where the CodeArtifact domain is located |
-| codeartifact_domain_name |         | (required) CodeArtifact domain, typically just a company name      |
-| iam_policy_path          | /ci/    | Use path to differentiate application/user/CI roles                |
-| iam_policy_name          | builder | Name of the IAM policy                                             |
-| partition                | aws     | AWS partition, e.g. aws, aws-cn, aws-us-gov                        |
-| region                   |         | (required) AWS region where CodeArtifact is located                |
-
-## Outputs
-
-| Name       | Description                                  |
-|------------|----------------------------------------------|
-| policy_arn | ARN of the IAM policy created by this module |
+| Name                                                                                                                 | Type     |
+|----------------------------------------------------------------------------------------------------------------------|----------|
+| [aws_iam_policy.builder](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/aws_iam_policy) | resource |
 
 ## Authors
 
