@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.15](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.14...v1.0.15) (2026-11-27)
+
+### Documentation
+
+* AGENTS.md w/o pointer to shared rules, implicit by directory hierarchy ([3e3a470](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/3e3a4708720cdef7b60cb49c763ff71b44055a17))
+* md reference-style links, grouped at the bottom [skip ci] ([76816aa](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/76816aa2003fd7136fbc0986fc23ac396aaa8b45))
+* wrap md lines at 120 chars [skip ci] ([1a4d5ee](https://github.com/agilecustoms/terraform-aws-ci-builder/commit/1a4d5ee9ca10eb27a86a54ce0805feafa8013fe1))
+
+
 ## [1.0.14](https://github.com/agilecustoms/terraform-aws-ci-builder/compare/v1.0.13...v1.0.14) (2026-11-26)
 
 ### Documentation
