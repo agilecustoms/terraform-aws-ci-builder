@@ -13,10 +13,9 @@
 *infrastructure-core* uses it for role `ci/builder` in the Dist account (`aws/account_dist/role-builder.tf`).
 Read side of *setup-maven-codeartifact*, the publish side is *terraform-aws-ci-publisher*
 
-## Changes
+## Change together
 
-The module is public, others depend on it. There is no prerelease channel: `Validate` (lint, `terraform test`)
-runs before `Release`, then every push to `main` is released. Users pin a version (no floating tags)
+- README Inputs table must match `variables.tf` (names, required, defaults), Outputs table must match `outputs.tf`
 
 ## Development
 
@@ -24,6 +23,7 @@ runs before `Release`, then every push to `main` is released. Users pin a versio
 `test-tf` runs `terraform test` (`tests/builder.tftest.hcl`) with `command = plan` and a provider
 that skips AWS credentials
 
-## Documentation rules
+## Release procedure
 
-- README Inputs table must match `variables.tf` (names, required, defaults), Outputs table must match `outputs.tf`
+The module is public, others depend on it. There is no prerelease channel: `Validate` (lint, `terraform test`)
+runs before `Release`, then every push to `main` is released. Users pin a version (no floating tags)
